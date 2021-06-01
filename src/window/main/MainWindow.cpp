@@ -17,7 +17,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     button->move(10, 40);
     button->resize(100, 50);
     button->setParent(this);
-    qDebug() << "hello world" << endl;
 }
 
 MainWindow::~MainWindow()

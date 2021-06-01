@@ -14,6 +14,7 @@ public slots:
     void SubmitButton();
 
 private:
+    QWidget* background();
     QWidget* main();
     QWidget* username();
     QWidget* password();

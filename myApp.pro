@@ -1,3 +1,26 @@
+include(./orm/QxOrm.pri)
+
+INCLUDEPATH += F:\qt\myApp\orm\include
+LIBS += -LF:\qt\myApp\orm\lib
+
+CONFIG(debug, debug|release) {
+TARGET = Demo
+LIBS += -l"QxOrmd"
+} else {
+TARGET = Demo
+LIBS += -l"QxOrm"
+})
+
+DEFINES += _BUILDING_QX_DEMO
+QT -= gui
+
+!contains(DEFINES, _QX_NO_PRECOMPILED_HEADER) {
+PRECOMPILED_HEADER = ./orm/precompiled.h
+} # !contains(DEFINES, _QX_NO_PRECOMPILED_HEADER)
+
+CONFIG += c++11 console
+CONFIG -= app_bundle
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -19,6 +42,7 @@ SOURCES += \
 #    mainwindow.cpp \
     src/common/menu_bar.cpp \
     src/common/status_bar.cpp \
+    src/util/db.cpp \
     src/window/login/LoginWindow.cpp \
     src/window/main/MainWindow.cpp
 
@@ -26,6 +50,7 @@ HEADERS += \
 #    mainwindow.h \
     src/common/menu_bar.h \
     src/common/status_bar.h \
+    src/util/db.h \
     src/window/login/LoginWindow.h \
     src/window/main/MainWindow.h
 
@@ -33,7 +58,7 @@ HEADERS += \
  #    mainwindow.ui
 
 TRANSLATIONS += \
-    zh_CN.ts
+    src/i18n/zh_CN.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -44,4 +69,7 @@ DISTFILES += \
     src/i18n/zh_CN.qm \
     src/i18n/zh_CN.ts
 
-#QT       += sql
+QT       += sql
+
+RESOURCES += \
+    src/resource.qrc
