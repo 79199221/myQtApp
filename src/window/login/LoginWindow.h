@@ -11,15 +11,12 @@ public:
     LoginWindow(QWidget *parent = nullptr);
     ~LoginWindow();
 public slots:
-    void SubmitButton();
+    void LoginButtonClicked();
+    void userFieldTextEdited(QString value);
 
 private:
     QWidget* background();
     QWidget* main();
-    QWidget* username();
-    QWidget* password();
-    QWidget* options();
-    QWidget* submit();
 };
 
 #endif //MYAPP_LOGIN_WINDOW_H

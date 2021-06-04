@@ -1,8 +1,14 @@
 <RCC>
     <qresource prefix="/image">
-        <file alias="/background/login.gif">resource/image/background/login.gif</file>
+        <file alias="/background/login">resource/image/background/login.gif</file>
     </qresource>
     <qresource lang="中文（简体）" prefix="/i18n">
         <file alias="/zh_CN.qm">i18n/zh_CN.qm</file>
+    </qresource>
+    <qresource prefix="/font">
+        <file alias="/awesome">resource/font/font-awesome.ttf</file>
+    </qresource>
+    <qresource prefix="/sqlite">
+        <file alias="/database">resource/sqlite/database.db</file>
     </qresource>
 </RCC>

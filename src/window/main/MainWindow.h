@@ -12,6 +12,10 @@ public:
     ~MainWindow();
 
 private:
+    QWidget* layout();
+    QWidget* iconSection();
+    QWidget* menuSection();
+    QWidget* contentSection();
 };
 
 

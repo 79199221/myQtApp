@@ -30,8 +30,9 @@ set(SOURCE_FILES
         src/window/login/LoginWindow.h src/window/login/LoginWindow.cpp
         src/common/menu_bar.h src/common/menu_bar.cpp
         src/common/status_bar.h src/common/status_bar.cpp
-        src/model/user.h src/model/user.cpp
-        src/util/db.h src/util/db.cpp
+        src/db/db.h src/db/db.cpp
+        src/db/user.h src/db/user.cpp
+        src/ui/login_window.ui src/ui/login_window.h src/ui/login_window.cpp
         src/i18n/zh_CN.ts
         )
 add_executable(myApp ${SOURCE_FILES})

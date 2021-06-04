@@ -4,28 +4,50 @@
 <context>
     <name>LoginWindow</name>
     <message>
-        <location filename="../window/login/LoginWindow.cpp" line="59"/>
         <source>Password</source>
         <translatorcomment>密码</translatorcomment>
-        <translation>密码</translation>
+        <translation type="vanished">密码</translation>
     </message>
     <message>
-        <location filename="../window/login/LoginWindow.cpp" line="63"/>
         <source>Please Input Password</source>
         <translatorcomment>请输入密码</translatorcomment>
-        <translation>密码</translation>
+        <translation type="vanished">密码</translation>
     </message>
     <message>
-        <location filename="../window/login/LoginWindow.cpp" line="78"/>
         <source>Auto Login</source>
         <translatorcomment>自动登录</translatorcomment>
-        <translation>自动登录</translation>
+        <translation type="vanished">自动登录</translation>
     </message>
     <message>
-        <location filename="../window/login/LoginWindow.cpp" line="81"/>
         <source>Remember Me</source>
         <translatorcomment>记住密码</translatorcomment>
-        <translation>记住密码</translation>
+        <translation type="vanished">记住密码</translation>
+    </message>
+    <message>
+        <location filename="../ui/login_window.ui" line="17"/>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/login_window.ui" line="33"/>
+        <source>用户名</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/login_window.ui" line="43"/>
+        <source>密码</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/login_window.ui" line="55"/>
+        <location filename="../ui/login_window.ui" line="62"/>
+        <source>CheckBox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/login_window.ui" line="71"/>
+        <source>Login</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

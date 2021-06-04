@@ -2,24 +2,35 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QDebug>
-#include <src/window/login/LoginWindow.h>
+#include "src/window/login/LoginWindow.h"
 #include <QtCore/QFile>
 #include <QtSql/QSqlDatabase>
-#include <src/util/db.h>
+#include <QtSql/QSqlError>
+#include "src/util/font_awesome.h"
 
+void sqlite();
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+    sqlite();
     QTranslator *qtTranslator = new QTranslator;
-    DB* Db = new DB;
 
-    if(qtTranslator->load(":/i18n/zh_CN.qm")){
+    if(qtTranslator->load(QString(":/i18n/%0.qm").arg("zh_CN"))){
         app.installTranslator(qtTranslator);
     }
-    MainWindow w;
-    w.resize(500, 500);
-//    w.show();
+//    (new MainWindow)->show();
+//    (new LoginWindow)->show();
     (new LoginWindow)->show();
 
     return app.exec();
+}
+
+void sqlite()
+{
+    auto connection = QSqlDatabase::addDatabase("QSQLITE");
+    connection.setDatabaseName(QCoreApplication::applicationDirPath() + "/database.db");
+    if (!connection.open()) {
+        QSqlError err = connection.lastError();
+        qDebug() << connection.lastError().text();
+    }
 }
